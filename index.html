@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Protsessoriaja planeerimise algoritmide töö visualiseerimine</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js" defer></script>
+  <script src="calc.js" defer></script>
+  <script src="draw.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div>
+      <header>
+        <h1>Protsessoriaja planeerimise algoritmide töö visualiseerimine</h1>
+      </header>
+      <section>
+        <p>
+          Bep is Best
+        </p>
+      </section>
+      <hr />
+      <section>
+        <p>
+          Vali või sisesta järjend (kujul
+          <span class="cool_mono">1,10;4,2;12,3;13,2</span>)
+        </p>
+        <form id="järjend">
+          <input type="radio" id="esimene" value="0,7;1,5;2,3;3,1;4,2;5,1" name="järjend" checked />
+          <label for="esimene">Esimene <span class="cool_mono">0,7;1,5;2,3;3,1;4,2;5,1</span></label>
+          <br>
+          <input type="radio" id="teine" value="0,2;0,4;12,4;15,5;21,10" name="järjend" />
+          <label for="teine">Teine <span class="cool_mono">0,2;0,4;12,4;15,5;21,10</span></label>
+          <br>
+          <input type="radio" id="kolmas" value="0,4;1,5;2,2;3,1;4,6;6,3" name="järjend" />
+          <label for="kolmas">Kolmas <span class="cool_mono">0,4;1,5;2,2;3,1;4,6;6,3</span></label>
+          <br>
+          <input type="radio" id="endaoma" value="" name="järjend" />
+          <label for="endaoma">Enda oma <input type="text" id="ev"
+              oninput="document.getElementById('endaoma').value = this.value"
+              onclick="document.getElementById('endaoma').checked = true" /></label>
+        </form>
+        <p>
+          Algoritmi käivitamiseks tee valik ja klõpsa nupule
+        </p>
+        <input type="button" value="FCFS" id="fcfs" onclick="fcfs()" />
+        <input type="button" value="SRTF" id="srtf" onclick="srtf()" />
+        <input type="button" value="RR4" id="rr4" onclick="rr4()" />
+        <input type="button" value="2xFCFS" id="fcfsx2" onclick="fcfsx2()" />
+        <input type="button" value="Puhasta väljund" id="clear" onclick="puhasta()" />
+        <div id="result">
+          <p>
+            <span id="chosen_algo">---</span> Keskmine ooteaeg:
+            <span class="cool_mono" id="ooteaeg">--</span>
+          </p>
+          <div id="gantt"></div>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <p>
+          <em>Kas kuidagi saaks keskmist ooteaega veel väiksemaks kui ükski neist
+            neljast algoritmist sai? Kui jah, siis näiteks kuidas? Kui ei, siis
+            miks?</em>
+        </p>
+        <p>
+          Bep is Good
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

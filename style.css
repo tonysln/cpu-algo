@@ -1,0 +1,70 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #c9d0dd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+div input[type=radio] {
+  margin-bottom: 1.2em;
+}
+
+label span, #ev {
+  margin-left: 1.6em;
+}
+
+.cool_mono {
+  font-family: monospace;
+  font-size: 120%;
+  background-color: #fafae8;
+  padding: 0.1em 0.3em 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+#ev {
+  font-family: monospace;
+}
+
+main {
+  width: 890px;
+  background: #ffffff;
+  margin: 0 auto;
+  height: 100%;
+  padding: 1em;
+}
+
+hr {
+  margin: 2em 0 2em 0;
+  opacity: 0.4;
+}
+
+header {
+  margin-bottom: 1.4em;
+}
+
+canvas {
+  margin: 1em 0 0em 0;
+}
+
+#chosen_algo {
+  font-weight: bold;
+  margin-right: 0.6em;
+}
